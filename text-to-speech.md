@@ -7,7 +7,7 @@ Notes on TTS technology.
 Neural Network-based synthesis
 ------------------------------
 
-### Misc
+### Overview
 
 Fast CPU inference:
 
@@ -30,21 +30,24 @@ Parallel WaveNet  fast        fastest
 
 ### WaveRNN
 
-Sounds really good. This might be the one to use.
+Looks really good. This might be the one to use.
+
+Transforms mel spectrograms into waveforms. Doesn't appear to be an end-to-end system:
+
+```
+  input (mel, model) => WaveRNN => waveform
+```
 
 "wavernn" has fast CPU inference time:
 
-https://github.com/keithito/tacotron/issues/152
-
-https://arxiv.org/abs/1802.08435
-
-https://github.com/fatchord/WaveRNN
-
-https://github.com/kdhingra307/wavernn
+- https://github.com/keithito/tacotron/issues/152
+- https://arxiv.org/abs/1802.08435
+- https://github.com/fatchord/WaveRNN
+- https://github.com/kdhingra307/wavernn
 
 "I wouldn't recommend this particular model unless you want to achieve real-time inference on a mobile app or something like that."
 
-https://github.com/fatchord/WaveRNN/issues/6
+- https://github.com/fatchord/WaveRNN/issues/6
 
 "@hdmjdp I'm still working on the simplified model and the results are pretty good so far (more params than your 0.95M though) ... also experimenting with batched inference on GPU." - Dec 4 2018
 
@@ -88,6 +91,13 @@ trained with a single GPU. The discussion is here: #12"
 
 - [NVIDA impl](https://github.com/NVIDIA/WaveGlow)
 
+### nv-wavenet
+"Faster than real time".
+
+https://devblogs.nvidia.com/nv-wavenet-gpu-speech-synthesis/
+
+“Medium” is the largest model for which the Deep Voice authors were able to achieve 16 kHz inference on a CPU. It uses 64 residual channels, 128 skip channels, and 20 layers.
+
 ### Tacotron 2 (Dec 2017)
 End-to-end.
 
@@ -119,12 +129,6 @@ Input: text => Output: raw spectrogram
 ### Griffin-Lim
 
 
-### nv-wavenet
-"Faster than real time".
-
-https://devblogs.nvidia.com/nv-wavenet-gpu-speech-synthesis/
-
-“Medium” is the largest model for which the Deep Voice authors were able to achieve 16 kHz inference on a CPU. It uses 64 residual channels, 128 skip channels, and 20 layers.
 
 ### Char2Wav (2017)
 Independent. End-to-end.  
