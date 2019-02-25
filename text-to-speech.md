@@ -3,8 +3,11 @@ Text To Speech
 
 Notes on TTS technology.
 
-Misc
-----
+
+Neural Network-based synthesis
+------------------------------
+
+### Misc
 
 Fast CPU inference:
 
@@ -12,17 +15,21 @@ https://github.com/yoyololicon/wavenet-like-vocoder
 
 http://on-demand.gputechconf.com/gtc/2017/presentation/s7544-andrew-gibiansky-efficient-inference-for-wavenet.pdf
 
+This looks promising (2019-02-25) :
 
+https://github.com/geneing/WaveRNN-Pytorch
+
+```
 model             training    inference
 . . . . . . . . . . . . . . . . . . . . .
 WaveNet           faster      slowest
 FFTNet            fastest     slower
 WaveRNN           slower      faster
 Parallel WaveNet  fast        fastest
+```
 
+### WaveRNN
 
-WaveRNN
--------
 Sounds really good. This might be the one to use.
 
 "wavernn" has fast CPU inference time:
@@ -41,8 +48,8 @@ https://github.com/fatchord/WaveRNN/issues/6
 
 "@hdmjdp I'm still working on the simplified model and the results are pretty good so far (more params than your 0.95M though) ... also experimenting with batched inference on GPU." - Dec 4 2018
 
-Waveglow
---------
+### Waveglow
+
 "Faster than real time".
 
 Generates from mel-spectrograms.
@@ -52,7 +59,7 @@ Single cost function.
 
 Ready to test with pre-trained model on LJS.
 
-### Quotes
+#### Quotes
 
 "I have 2x1080ti, and the training process takes at least 5 days to get a decent result."
 
@@ -77,20 +84,19 @@ trained with a single GPU. The discussion is here: #12"
 
 - https://github.com/NVIDIA/waveglow/issues/53
 
-### Links
+#### Links
 
 - [NVIDA impl](https://github.com/NVIDIA/WaveGlow)
 
-Tacotron 2 (Dec 2017)
----------------------
+### Tacotron 2 (Dec 2017)
 End-to-end.
 
-### Problems:
+#### Problems:
 
 - Cannot generate audio in realtime
 - Difficulty with pronouncing hard words
 
-### Links
+#### Links
 
 - [Original Paper](https://arxiv.org/abs/1712.05884), Natural TTS Synthesis 
   by Conditioning WaveNet on Mel Spectrogram Predictions
@@ -98,8 +104,7 @@ End-to-end.
 - [NVIDIA impl](https://github.com/NVIDIA/tacotron2), without Wavenet.
 
 
-Tacotron (2017)
----------------
+#### Tacotron (2017)
 By Google. End-to-end. Generates speech directly from characters (instead of having multiple stages, 
 eg. analysis, synthesis).
 
@@ -111,30 +116,23 @@ Input: text => Output: raw spectrogram
                   +-> Griffin-Lim reconstuction => Speech
 ```
 
-Griffin-Lim
------------
+### Griffin-Lim
 
 
-nv-wavenet
-----------
+### nv-wavenet
 "Faster than real time".
 
 https://devblogs.nvidia.com/nv-wavenet-gpu-speech-synthesis/
 
 “Medium” is the largest model for which the Deep Voice authors were able to achieve 16 kHz inference on a CPU. It uses 64 residual channels, 128 skip channels, and 20 layers.
 
-
-Char2Wav (2017)
----------------
+### Char2Wav (2017)
 Independent. End-to-end.  
 
-
-WaveNet (2016)
---------------
+### WaveNet (2016)
 By Google. Slow. Not end-to-end. Requires linguistic features. Only replaces the vocoder and 
 acoustic model.
 
-
-### Links
+#### Links
 
 - https://google.github.io/tacotron/
