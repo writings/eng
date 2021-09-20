@@ -8,6 +8,6 @@ Setup fresh machine for development
 Something I may need to automate. 
 
 1. Turn off One Drive.
-2. Download Chrome and Firefox. Install uBlock Origin in each.
+2. Download browsers Chrome and Firefox. Install uBlock Origin in each. Set as default.
 3. Set up password manager and browser extensions.
-4. 
+4. Download IDEs CLion, Visual Studio Code, and Visual Studio. 
