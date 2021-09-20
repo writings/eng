@@ -16,3 +16,4 @@ Something I may need to automate.
     1. [ ] Install vim keybindings
     2. [ ] Install Rust plugin in CLion
 5. [ ] Install Epic Games Launcher, Unreal Engine (correct versions), Quixel Bridge
+6. [ ] Download Github Desktop
