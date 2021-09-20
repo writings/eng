@@ -15,4 +15,4 @@ Something I may need to automate.
 4. [ ] Download IDEs CLion, Visual Studio Code, and Visual Studio. 
     1. [ ] Install vim keybindings
     2. [ ] Install Rust plugin in CLion
-5. [ ] ???
+5. [ ] Install Epic Games Launcher, Unreal Engine (correct versions)
