@@ -18,3 +18,8 @@ Something I may need to automate.
 5. [ ] Install Epic Games Launcher, Unreal Engine (correct versions), Quixel Bridge
     1. [ ] Run Unreal Engine, which will ask to install .NET components
 7. [ ] Download Github Desktop
+
+Paths for development
+---------------------
+
+* `C:\Users\USERNAME\Documents\Unreal Projects\PROJECT`
