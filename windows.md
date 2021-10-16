@@ -12,11 +12,11 @@ Something I may need to automate.
     1. [ ] Install uBlock Origin in each. 
     2. [ ] Set as default.
 3. [ ] Set up password manager and browser extensions.
-4. [ ] Download IDEs CLion and Visual Studio Code.
+4. [ ] Download IDEs **CLion** and **Visual Studio Code**.
     1. [ ] Install vim keybindings
     2. [ ] Install Rust plugin in CLion
-5. [ ] Install Visual Studio with Game Development support
-    1. [ ] Choose "workload" titled "Game Development with C++" (required for Unreal Engine)
+5. [ ] Install **Visual Studio** with Game Development support
+    1. [ ] Choose "workload" titled "**Game Development with C++**" (required for Unreal Engine)
     2. [ ] Choose "workload" titled "Desktop development with C++" (not sure  if this is required)
     3. [ ] Install vim keybindings
 7. [ ] Install Epic Games Launcher, Unreal Engine (correct versions), Quixel Bridge
