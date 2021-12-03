@@ -5,7 +5,15 @@ Use Kibana to explore the index.
 
 Index stats
 
-`GET /{index_name}/_stats`
+```
+GET /{index_name}/_stats
+```
+
+Get a single document, where *\_id* is the document ID,
+
+```
+GET /{index_name}/_doc/{_id}
+```
 
 Get a random document
 
@@ -26,3 +34,4 @@ POST /{index_name}/_search
    }
 }
 ```
+
