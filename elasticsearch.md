@@ -35,3 +35,8 @@ POST /{index_name}/_search
 }
 ```
 
+Get Elasticsearch version and cluster stats
+
+```
+GET /
+```
