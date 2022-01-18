@@ -40,3 +40,11 @@ Get Elasticsearch version and cluster stats
 ```
 GET /
 ```
+
+## Creating indices / mapping
+
+Field types:
+
+- `keyword`: ids, email addresses, PKs/FKs (search by exact value)
+- `constant_keyword`: always the same value
+- `text`: full text, passed through analyzer
