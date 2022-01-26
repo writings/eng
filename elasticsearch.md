@@ -3,6 +3,19 @@ elasticsearch
 
 Use Kibana to explore the index. 
 
+
+Get Elasticsearch version and cluster stats
+
+```
+GET /
+```
+
+Get a list of indices and summary statistics (size, number of documents, etc.)
+
+```
+GET /_cat/indices
+```
+
 Index stats
 
 ```
@@ -33,12 +46,6 @@ POST /{index_name}/_search
       }
    }
 }
-```
-
-Get Elasticsearch version and cluster stats
-
-```
-GET /
 ```
 
 ## Creating indices / mapping
