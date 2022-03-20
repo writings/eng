@@ -25,6 +25,9 @@ Something I may need to automate.
     1. [ ] Run Unreal Engine, which will ask to install .NET components
     2. [ ] Start an Unreal Engine project. If it fails due to Visual Studio, try running the Visual Studio installer again. 
 8. [ ] Download Github Desktop
+9. [ ] Download Ripgrep
+    1. [ ] Download from releases https://github.com/BurntSushi/ripgrep/releases
+    2. [ ] Move to C:\bin or similar, and add that to PATH
 
 Paths for development
 ---------------------
