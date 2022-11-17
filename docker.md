@@ -6,13 +6,13 @@ docker
 Run a container with custom entrypoint
 
 ```
-docker run --rm -it --entrypoint /bin/bash {container}
+docker run --rm -it -p {host}:{container} --entrypoint /bin/bash {container}
 ```
 
 With GPU support, 
 
 ```
-docker run --rm --gpus all -it --entrypoint /bin/bash {image}
+docker run --rm --gpus all -it -p {host}:{container} --entrypoint /bin/bash {image}
 ```
 
 ### NVidia Container Toolkit 
